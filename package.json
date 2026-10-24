@@ -5,11 +5,14 @@
   "main": "dist/src/functions/*.js",
   "scripts": {
     "build": "tsc",
+    "demo:domain": "npm run build && node ./dist/scripts/demo-domain.js",
+    "demo:reviews": "npm run build && node ./dist/scripts/demo-reviews.js",
     "watch": "tsc -w",
     "clean": "rimraf dist",
     "prestart": "npm run clean && npm run build",
     "start": "func start --typescript",
-    "test": "echo \"No automated tests configured yet\" && exit 1"
+    "test": "echo \"No automated tests configured yet\" && exit 1",
+    "seed": "npm run build && node --import ./dist/scripts/load-settings.js ./dist/scripts/seed-review-repo.js"
   },
   "dependencies": {
     "@azure/cosmos": "~4.10.1",
