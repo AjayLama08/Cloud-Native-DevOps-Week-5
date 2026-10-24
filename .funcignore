@@ -1,8 +1,11 @@
 *.js.map
 *.ts
+scripts/
+dist/scripts/
 .git*
 .vscode
 *.settings.json
+*.settings.example.json
 test
 getting_started.md
 node_modules/@types/

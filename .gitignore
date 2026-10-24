@@ -20,7 +20,12 @@ project.lock.json
 /data
 .secrets
 appsettings.json
+
+# Environment-specific configuration (may contain secrets)
 *.settings.json
+
+# Allow non-secret configuration templates
+!*.settings.example.json
 
 node_modules
 dist
